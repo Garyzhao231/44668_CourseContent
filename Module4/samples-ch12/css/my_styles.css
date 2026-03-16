@@ -1,0 +1,37 @@
+/* 	Developer: Your Name 
+	Start Date:  today's date */
+	
+/* set the height of the body and html to 100%*/
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+.fullborder {
+	border: 2px solid black; 
+	border-collapse: collapse;
+	width:80%;
+}
+
+.fullborder th, td {
+	border: 1px solid rgb(175,175,175); 
+}
+
+#searchBox {
+	border: 2px solid black;
+	border-radius: 5px;
+	width: 25%;
+	padding: 5px;
+	display: inline-block;
+}
+
+#menuOptions {
+	text-align: center;
+	display: inline-block;
+}
+
+
+#searchBox input[type=submit] {
+	margin-top: 2%;
+	margin-left: 80%;
+}
