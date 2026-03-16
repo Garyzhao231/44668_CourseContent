@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Developer: Max Coller 
+        	Start Date:  04/23/2023 -->
+        <title>Totally Awesome Stuff</title>
+		<link rel="stylesheet" type="text/css" href="css/my_styles.css">
+    </head>
+    <body>
+		<header>
+			<h1>
+    			Welcome to Totally Awesome Stuff, LLC!
+    		</h1>
+		</header>
+		
+		<nav>
+			<ul>
+				<li>
+					<a href="index.html">Home</a>
+				</li>
+				<li>
+					<a href="products.html">Products</a>
+				</li>
+				<li>
+					<a href="about.html">About Us</a>
+				</li>
+				<li>
+					<a href="video.html">Videos</a>
+				</li>
+				<li>
+					<a href="contact_us.html">Contact Us</a>
+				</li>
+			</ul>
+		</nav>
+
+		<section>
+			<form>
+				<fieldset>
+    				<legend>Visitor Feedback Form</legend>
+					<label for="f_name">First Name:</label>
+  					<input type="text" id="f_name" name="f_name" required/>
+  					<br/>
+  					<label for="l_name">Last name:</label>
+  					<input type="text" id="l_name" name="l_name" required/>
+  					<br/>
+  					<label for="email">Email:</label>
+  					<input type="email" id="email" name="email" required/>
+  					<br/>
+  					<fieldset>
+						<legend>How did you hear about us?  Check all that apply:</legend>
+  						<input type="checkbox" id="google" name="google" value="Google"/>
+  						<label for="google">Google Search</label>
+  						<input type="checkbox" id="owl" name="owl" value="Owl"/>
+  						<label for="owl">An Owl Told Me</label>
+  						<input type="checkbox" id="skywriter" name="skywriter" value="Skywriter"/>
+  						<label for="skywriter">I Saw A Skywriter Message</label>
+  					</fieldset>
+  					<br/>
+  					<fieldset>
+  						<legend>Would you like to subscribe to our occasional newsletter?</legend>
+  						<input type="radio" id="yes_subscribe" name="subscribe" value="Yes"/>
+  						<label for="yes_subscribe">Yes</label>
+  						<input type="radio" id="no_subscribe" name="subscribe" value="No"/>
+  						<label for="no_subscribe">No</label>
+  					</fieldset>
+  					<br>
+  					<label for="nature">What is the nature of your inquiry?</label>
+					<select id="nature" name="nature" required>
+  						<option value="new_product">New Product Suggestion</option>
+  						<option value="question">Question About An Existing Product</option>
+  						<option value="just_lonely">I'm Just Lonely And Crave Human Interaction</option>
+  						<option value="other">Other</option>
+					</select>
+					<textarea name="message" rows="10" cols="50" maxlength="400" 
+						placeholder="Type your message here" required></textarea>
+					<input type="submit" value="Submit"/>
+				</fieldset>
+			</form>
+		</section>
+
+		<footer>
+			Copyright &copy; 2023 
+		</footer>
+    </body>
+</html>
