@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Developer: (your name) 
+        	Start Date: (today's date) -->
+        <title>The Ultimate Calculator</title>
+		<link rel="stylesheet" type="text/css" href="css/calculator.css" media="screen" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="resources/jquery-3.6.0.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("input.show:button").click(function(){
+					$("#display").val($("#display").val()+$(this).val());
+				});
+				
+				$("#C").click(function(){
+					$("#display").val("");
+				});
+				
+				$("#sign_switch").click(function(){
+					$("#display").val($("#display").val()*-1);
+				});
+				
+				$("#percent").click(function(){
+					$("#display").val($("#display").val()/100);
+				});
+				
+				$("#equals").click(function(){
+					$("#display").val(eval($("#display").val()));
+				});
+			});
+		</script>
+    </head>
+    <body>
+		<header>
+			<h1>
+    			A Calculator
+    		</h1>
+		</header>
+		<section>
+			<div id="calculator">
+				<div id="display_container">
+					<input type="text" id="display" name="display" placeholder="0"\>
+					<input type="hidden" id="memory" name="memory" \>
+				</div>
+				<div id="inputs" class="keypad">
+					<input type="button" id="C" name="C" value="C"\>
+					<input type="button" id="sign_switch" name="sign_switch" value="+/-"\>
+					<input type="button" id="percent" name="percent" value="%"\>
+					<input type="button" class='show' id="divide" name="divide" value="/"\>
+					<input type="button" class='show' id="7" name="7" value="7"\>
+					<input type="button" class='show' id="8" name="8" value="8"\>
+					<input type="button" class='show' id="9" name="9" value="9"\>
+					<input type="button" class='show' id="multiply" name="multiply" value="*"\>
+					<input type="button" class='show' id="4" name="4" value="4"\>
+					<input type="button" class='show' id="5" name="5" value="5"\>
+					<input type="button" class='show' id="6" name="6" value="6"\>
+					<input type="button" class='show' id="subtract" name="subtract" value="-"\>
+					<input type="button" class='show' id="1" name="1" value="1"\>
+					<input type="button" class='show' id="2" name="2" value="2"\>
+					<input type="button" class='show' id="3" name="3" value="3"\>
+					<input type="button" class='show' id="add" name="add" value="+"\>
+					<input type="button" class='show' id="0" name="0" value="0"\>
+					<input type="button" class='show' id="." name="." value="."\>
+					<input type="button" id="Mem" name="Mem" value="M"\>
+					<input type="button" id="equals" name="equals" value="="\>
+				</div>
+			</div>
+		</section>
+
+		<footer>
+			Copyright &copy; 2023 
+		</footer>
+    </body>
+</html>

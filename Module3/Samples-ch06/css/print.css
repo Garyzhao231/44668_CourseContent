@@ -1,0 +1,13 @@
+/* 	Developer: Max Coller 
+	Start Date:  04/23/2023 */
+
+/* hide the nav on the printed page */
+nav {
+	display: none;
+}
+
+/* center the header and section on the printed page */
+header, section {
+	text-align: center;
+}
+

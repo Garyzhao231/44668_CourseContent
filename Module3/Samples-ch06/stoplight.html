@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Developer: (your name) 
+        	Start Date: (today's date) --> 
+		<title>
+			My First Web Stoplight
+		</title>
+		<link rel="stylesheet" type="text/css" href="css/light_style.css"/>
+		<script src="resources/jquery-3.6.0.js"></script>
+		<script>
+		$(document).ready(function(){
+		
+    		$('#wrapper').animate({'margin-top': '15px'}, 1500);
+		
+			$('input[type="button"]').click(function(){
+				$( ".light" ).css( "background-color", "" );
+				$('#' + $(this).val() + 'Light').css("background-color", $(this).val());
+			});
+			
+			$(".light").mouseover(function(){
+				$( ".light" ).css( "background-color", "" );
+				let v_color = event.target.id;
+				v_color = v_color.replace("Light","");
+				$(this).css("background-color", v_color);
+			});
+		});
+		</script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="lightbox">
+				<div>
+					<div class="light" id="GreenLight"></div>
+				</div>
+				<div>
+					<div class="light" id="YellowLight"></div>
+				</div>
+				<div>
+					<div class="light" id="RedLight"></div>
+				</div>
+			</div>
+			<div class="lightpost">
+			
+			</div>
+			<div class="button-container">
+				<div class="button-item">
+					<input type=button value="Red">
+				</div>
+				<div class="button-item">
+					<input type=button value="Yellow">
+				</div>
+				<div class="button-item">
+					<input type=button value="Green">
+				</div>
+			</div>
+			<div class="lightpost">
+			
+			</div>
+			<div id="base">
+			
+			</div>
+		</div>
+	</body>
+</html>

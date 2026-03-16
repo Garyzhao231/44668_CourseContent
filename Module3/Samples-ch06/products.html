@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Developer: Max Coller 
+        	Start Date:  04/23/2023 -->
+        <title>Totally Awesome Stuff</title>
+		<link rel="stylesheet" type="text/css" href="css/my_styles2.css" media="screen, print" />
+		<link rel="stylesheet" type="text/css" href="css/full_screen.css" media="screen and (min-width:769px)" />
+		<link rel="stylesheet" type="text/css" href="css/tablet.css" media="screen and (max-width:768px) and (min-width:481px)" />
+		<link rel="stylesheet" type="text/css" href="css/mobile.css" media="screen and (max-width:480px)" />
+		<link rel="stylesheet" type="text/css" href="css/print.css" media="print" /> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script type="text/javascript" src="resources/jquery-3.6.0.js"></script>
+		<script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" />
+		<script>
+			$(document).ready(function () {
+    			$('#products').DataTable();
+			});
+		</script>
+    </head>
+    <body>
+		<header>
+			<h1>
+    			Welcome to Totally Awesome Stuff, LLC!
+    		</h1>
+			<input class="menu-chkbx" type="checkbox" id="menu-chkbx">
+  			<label class="menu-burger" for="menu-chkbx">
+    			<span class="hamburger"></span>
+  			</label>
+			<nav class='menu'>
+				<ul>
+					<li>
+						<a href="index.html">Home</a>
+					</li>
+					<li>
+						<a href="products.html">Products</a>
+					</li>
+					<li>
+						<a href="about.html">About Us</a>
+					</li>
+					<li>
+						<a href="video.html">Videos</a>
+					</li>
+					<li>
+						<a href="contact_us.html">Contact Us</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<section>
+			<table id='products'> 
+				<colgroup>
+					<col class="details" span="4" />
+					<col class="price" />
+				</colgroup>
+				<thead>
+					<tr> 
+						<th>Item No.</th> 
+						<th>Description</th> 
+						<th>Country of Origin</th> 
+						<th>Qty/Pkg</th> 
+						<th>Price</th> 
+					</tr>
+				</thead>
+				<tbody> 
+					<tr> 
+						<td>00011</td> 
+						<td><a href="candy.html">Low-Fat Candy for Goldfish</a></td> 
+						<td>Canada</td> 
+						<td>10 oz bag</td> 
+						<td>$12.95</td> 
+					</tr> 
+					<tr> 
+						<td>00059</td> 
+						<td><a href="wax.html">Whisker Wax for Dapper Cats</a></td> 
+						<td>United Kingdom</td> 
+						<td>1 oz jar</td> 
+						<td>$3.99</td> 
+					</tr> 
+					<tr> 
+						<td>00103</td> 
+						<td><a href="shampoo.html">No-More-Snarls Shampoo and Conditioner for Curly Hedgehog Quills</a></td> 
+						<td>South Africa</td> 
+						<td>16 oz bottle</td> 
+						<td>$19.95</td> 
+					</tr> 
+					<tr> 
+						<td>00211</td> 
+						<td><a href="ropss.html">Revive-O-Possum Smelling Salts for Catatonic Marsupials</a></td> 
+						<td>United States</td> 
+						<td>144 individual packets</td> 
+						<td>$13.99</td> 
+					</tr> 
+					<tr> 
+						<td>00008</td> 
+						<td>Interrogatives for Curious Owls: A Primer</td> 
+						<td>United States</td> 
+						<td>1 book</td> 
+						<td>$19.99</td> 
+					</tr> 
+					<tr> 
+						<td>03965</td> 
+						<td>Wing Floaties for Aquaphobic Ducks</td> 
+						<td>Canada</td> 
+						<td>1 pair</td> 
+						<td>$29.99</td> 
+					</tr> 
+					<tr> 
+						<td>04509</td> 
+						<td>Ab-Suey-Lutely Ab Roller for Potbellied Pigs</td> 
+						<td>Vietnam</td> 
+						<td>1 roller</td> 
+						<td>$39.99</td> 
+					</tr> 
+					<tr> 
+						<td>03965</td> 
+						<td>Anger Management Techniques for Hornets</td> 
+						<td>United Kingdom</td> 
+						<td>1 paperback book</td> 
+						<td>$19.99</td> 
+					</tr> 
+					<tr> 
+						<td>09000</td> 
+						<td>Vanishing Cream for Introverted Chameleons</td> 
+						<td>Madagascar</td> 
+						<td>10 oz Tube</td> 
+						<td>$9.99</td> 
+					</tr> 
+					<tr> 
+						<td>86753</td> 
+						<td>Ty-D-Paws Paw Sanitizer for Hygienic Raccoons</td> 
+						<td>United States</td> 
+						<td>64 oz Pump Dispenser</td> 
+						<td>$29.99</td> 
+					</tr> 
+					<tr> 
+						<td>55512</td> 
+						<td>Crock-o-Flies for Hungry Frogs</td> 
+						<td>United States</td> 
+						<td>12 oz Crock</td> 
+						<td>$1.99</td> 
+					</tr> 
+				</tbody>
+			</table> 
+		</section>
+
+		<footer>
+			Copyright &copy; 2023 
+		</footer>
+    </body>
+</html>

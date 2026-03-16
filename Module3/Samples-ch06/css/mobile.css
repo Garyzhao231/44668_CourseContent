@@ -1,0 +1,117 @@
+/* 	Developer: Max Coller 
+	Start Date:  04/23/2023 */
+
+/* create the mobile-friendly header template */
+header { 
+	width:100%;
+	margin: -10px 0px 0px -10px; 
+	padding-left: 5px; 
+	display: grid; 
+	grid-template-areas: 
+	   "hamburger   title   title" 
+	   "nav     nav     nav"; 
+} 
+
+/* assign the h1 to the title area, modify the size and position */
+header h1 {
+	display:flex;
+	grid-area: title;
+	font-size: 20px;
+	width: 100%;
+	margin:10px -10px 0px 0px;
+	align-items: center;
+}
+
+/* hide the checkbox in the mobile display */
+.menu-chkbx {
+	display: none;
+}
+
+/* assign the label using this class to the hamburger area of the header template */
+.menu-burger {
+	grid-area: hamburger;
+	margin-left:20px;
+	padding: 30px 20px 30px 0;
+	position: relative;
+	visibility: visible;
+}
+
+/* modify the style of the hamburger to make it into the patty */
+.hamburger {
+	display: block;
+	height: 2px;
+	width: 20px;
+	position: relative; 
+	background: rgb(0,0,0);
+}
+
+/* add some space before the patty for the pseudo element */
+.hamburger:before {
+	top: 5px;
+}
+
+/* add some space after the patty for the pseudo element */
+.hamburger:after {
+	top: -5px;
+}
+
+/* create the pseudo-buns for the burger */
+.hamburger:before, .hamburger:after {
+	background: rgb(0,0,0);
+	display: block;
+	width: 100%;
+	height: 100%;
+	content: '';
+	position: absolute;
+}
+
+/* assign the menu to the nav area, show it as a column of list items */
+.menu {
+	grid-area: nav;
+	display: flex;
+	flex-direction: column;
+	max-height: 0;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+
+/* toggle the menu to visible when the checkbox is checked */
+.menu-chkbx:checked ~ .menu {
+	max-height: 250px;
+	position: absolute;
+	margin-top: 62px;
+	z-index: 1;
+	border-radius: 5px;
+	background-color: rgb(220,220,220);
+}
+
+/* modify the background of the hamburger icon when the checkbox is checked */
+.menu-chkbx:checked ~ .menu-burger .hamburger {
+	background: transparent;
+}
+
+/* rotate the top bun 45 degrees down to start to form the X that shows when the burger is clicked */
+.menu-chkbx:checked ~ .menu-burger .hamburger:before {
+	transform: rotate(-45deg);
+}
+
+/* rotate the bottom bun up 45 degrees to make the other part of the X that shows when the burger is clicked */
+.menu-chkbx:checked ~ .menu-burger .hamburger:after {
+	transform: rotate(45deg);
+}
+
+/* move the tops of the buns together to complete the transformation to the X */
+.menu-chkbx:checked ~ .menu-burger .hamburger:before,
+.menu-chkbx:checked ~ .menu-burger .hamburger:after {
+	top: 0;
+}
+
+/* modify the appearance of the list items to space them out for larger thumbs */
+nav ul li {
+    margin: 10px 0px 10px 0px;
+    text-align: center;
+    border: 1px solid rgb(0,0,0);
+}
+
+
